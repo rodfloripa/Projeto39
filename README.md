@@ -9,8 +9,8 @@
 <p align="justify"><h3>3. Agrupamento por Similaridade (K-Means)</h3></p>
 <p align="justify">Diferente de modelos rígidos, o notebook utiliza o algoritmo <b>K-Means</b> com 5 clusters para segmentar o mercado. O sistema busca minimizar a inércia, agrupando empresas que apresentam comportamentos financeiros similares. O artigo de base valida que essa segmentação é o primeiro passo para uma <b>Explicabilidade (XAI)</b> robusta: é mais viável justificar um risco quando se conhece o perfil comportamental em que a empresa se encaixa.</p>
 <p align="justify">A distribuição de risco definida via <code>np.where</code> mapeia os grupos de forma lógica:</p>
- * <p align="justify"><b>Grupo 0 (Alto Risco):</b> Empresas identificadas com alta alavancagem e margens pressionadas.</p>
- * <p align="justify"><b>Grupo 4 (Muito Baixo Risco):</b> O perfil de maior segurança da carteira, com alta liquidez.</p>
+  <p align="justify"><b>Grupo 0 (Alto Risco):</b> Empresas identificadas com alta alavancagem e margens pressionadas.</p>
+  <p align="justify"><b>Grupo 4 (Muito Baixo Risco):</b> O perfil de maior segurança da carteira, com alta liquidez.</p>
 <p align="justify"><h3>4. Engenharia de Produção: Ingestão Diária</h3></p>
 <p align="justify">O diferencial técnico do projeto é a função <code>ingestao_diaria</code>. Ela simula um ambiente de produção real onde o modelo opera como uma ferramenta viva. Ao utilizar o <code>scaler.transform</code> e o <code>kmeans.predict</code> em novos dados, garante-se a <b>consistência temporal</b>: o critério de risco aplicado na operação contínua é o mesmo estabelecido na fase de treinamento, mitigando instabilidades de predição.</p>
 <p align="justify"><h3>5. Validação Científica</h3></p>
